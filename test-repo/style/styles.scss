@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: white;
+}
+
+header {
+  margin: 1rem;
+  div {
+    margin: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 1.8rem;
+    }
+    img {
+      height: 2.5rem;
+      margin-right: 10px;
+    }
+  }
+
+  button.toggle-btn {
+    display: none; /* 在小屏幕下显示切换按钮 */
+  }
+
+  nav {
+    width: 90%;
+    // margin: 0.75rem;
+    overflow: hidden;
+    background-color: white;
+    border-top: 1.2px solid gray;
+    border-bottom: 1.2px solid gray;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    a {
+      float: left;
+      font-size: 1rem;
+      color: rgb(0, 0, 0);
+      // padding: 14px 16px;
+      //   margin-top: 0.7rem;
+      text-decoration: none;
+    }
+    div.dropdown {
+      button.dropbtn {
+        float: left;
+        overflow: hidden;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+        form.header-search {
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
+          div {
+            display: flex;
+            input {
+              // margin: 0.2rem;
+              margin-left: 0;
+              width: 7rem;
+              height: 2rem;
+              background-color: #dcdcdc;
+              border: none;
+            }
+            button {
+              cursor: pointer;
+              border: none;
+              outline: none;
+              background-color: rgba(0, 0, 255, 0);
+              img {
+                width: 2rem;
+              }
+            }
+            //購物車的樣式
+            a {
+              // margin-top: 0.25rem;
+              &:hover {
+                cursor: pointer;
+              }
+              img {
+                margin-left: 0.5rem;
+                width: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    //產品下拉選單//
+    .dropdown .dropbtn {
+      margin-left: 0;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      color: rgb(0, 0, 0);
+      // padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      //   margin-top: 0.7rem;
+    }
+  }
+}
+
+nav a:hover,
+.dropdown:hover .dropbtn {
+  color: #1573e1;
+  font-weight: bold;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+form.header-search {
+  div {
+    display: flex;
+    input {
+      margin: 0.2rem;
+      margin-right: 0.8rem;
+      width: 7rem;
+      height: 2rem;
+      background-color: #dcdcdc;
+      border: none;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background-color: rgba(0, 0, 255, 0);
+      img {
+        height: 2rem;
+      }
+    }
+    //購物車的樣式
+    a {
+      //   margin-top: 0.25rem;
+      &:hover {
+        cursor: pointer;
+      }
+      img {
+        margin-left: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}
+
+main {
+  margin: 0.75rem;
+  display: flex;
+  justify-content: center;
+
+  section.pictures {
+    // min-height: 60vh;
+    width: 90%;
+    margin-top: 0.5rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    background-image: url(../照片/背景照.jpg);
+    background-size: cover;
+    background-position: center bottom -140px;
+    justify-content: center;
+    align-items: center;
+    div {
+      // width: 100%;
+      display: flex;
+
+      div {
+        // max-width: 90%;
+        display: inline-block;
+
+        // justify-content: center;
+        // align-items: center;
+        // max-height: 20vh;
+        img {
+          width: 18rem;
+          height: 13rem;
+          padding: 1.2rem 1rem;
+          // margin: 10px;
+          border-radius: 30px;
+          opacity: 0.9;
+        }
+        h2 {
+          margin-top: 0.5rem;
+          background-color: rgba(255, 255, 255, 0.65);
+          display: flex;
+          justify-content: center;
+          font-size: 1.5rem;
+          a {
+            color: #c5062c;
+            text-decoration: none;
+          }
+        }
+        p {
+          background-color: rgba(255, 255, 255, 0.65);
+          color: rgb(67, 65, 65);
+          font-size: 0.8rem;
+          display: flex;
+          justify-content: center;
+        }
+        img.act1 {
+          object-fit: cover;
+          object-position: center middle;
+        }
+        img.act2 {
+          object-fit: cover;
+          object-position: center middle;
+        }
+        img.act3 {
+          object-fit: cover;
+          object-position: bottom;
+        }
+      }
+    }
+  }
+  section.product {
+    // min-height: 60vh;
+    width: 90%;
+    margin-top: 0.5rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    background-color: rgb(242, 242, 242);
+    // background-image: url(../照片/背景照.jpg);
+    background-size: cover;
+    background-position: center bottom -140px;
+    justify-content: center;
+    // flex-wrap: wrap;
+    div {
+      div {
+        // max-width: 90%;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 200px;
+        // max-height: 20vh;
+        img {
+          width: 18rem;
+          height: 13rem;
+          padding: 1.2rem 1rem;
+          // margin: 10px;
+          border-radius: 30px;
+          opacity: 0.9;
+        }
+
+        h3 {
+          background-color: rgba(242, 242, 242, 0.466);
+          display: flex;
+          justify-content: center;
+          font-size: 1.1rem;
+
+          button.add {
+            height: 2.5vw;
+            width: 2.5vw;
+            margin-right: 0.2rem;
+            background-color: rgb(195, 240, 225);
+            border-radius: 50px;
+          }
+          button.mi {
+            height: 2.5vw;
+            width: 2.5vw;
+            font-size: 1rem;
+            margin-left: 0.2rem;
+            background-color: rgb(240, 210, 195);
+            border-radius: 50px;
+          }
+        }
+
+        h3.price {
+          margin: 0rem 1rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          border-bottom: 2px solid gray;
+        }
+        img.cupcake {
+          object-fit: cover;
+          object-position: 50% 95%;
+        }
+        img.cha {
+          object-fit: cover;
+          object-position: 50% 70%;
+        }
+      }
+    }
+  }
+  section.about {
+    div {
+      margin-top: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      img {
+        width: 24vw;
+        height: 13vw;
+        object-fit: cover;
+        object-position: center;
+      }
+      img.wom {
+        object-position: top center;
+      }
+      p {
+        margin: 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+  section.contact {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: center;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    div.left {
+      margin: 1rem 3rem;
+      flex: 1 1 200px;
+      img {
+        width: 40vw;
+      }
+    }
+    div.right {
+      flex: 1 1 200px;
+      flex-direction: column;
+
+      img {
+        width: 22vw;
+      }
+      p {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
+
+.active {
+  color: #4763c9;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    nav {
+      // flex-direction: column;
+    }
+  }
+  main {
+    section {
+      div {
+        div {
+          max-width: none;
+          img {
+            justify-content: center;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    nav {
+      flex-direction: column;
+    }
+  }
+  main {
+    section.pictures {
+      div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        div {
+          max-width: none;
+          img {
+            justify-content: center;
+          }
+        }
+      }
+    }
+    section.contact {
+      div.right,
+      div.left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

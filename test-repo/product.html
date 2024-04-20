@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Chloe" />
+    <meta name="robots" content="index,follow " />
+    <meta name="description" content=" 自製甜點網頁 " />
+    <title>產品|手工甜點</title>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--CSS link-->
+    <link rel="stylesheet" href="./style/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="./照片/LOGO.png" alt="" />
+        <h1 align="center">私人廚房</h1>
+      </div>
+      <!-- 切换按钮 -->
+      <button class="toggle-btn" onclick="toggleNav()">Toggle Menu</button>
+      <!-- 导航栏 -->
+      <div>
+        <nav>
+          <a href="index.html">首頁</a>
+
+          <div class="dropdown">
+            <button class="dropbtn">
+              產品
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="product.html">蛋糕</a>
+              <a href="product.html">餅乾</a>
+              <a href="product.html">其他</a>
+            </div>
+          </div>
+          <a href="aboutus.html">關於我們</a>
+          <a href="contact.html">聯絡我們</a>
+
+          <form action="" class="header-search">
+            <div>
+              <input type="search" name="" id=""
+              /placeholder="　輸入搜索內容...">
+              <button>
+                <img src="./照片/icon/search.png" alt="搜尋" title="搜尋" />
+              </button>
+
+              <a href="#"><img src="./照片/icon/shopping-cart.png" alt="" /></a>
+            </div>
+          </form>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="product">
+        <div>
+          <div>
+            <img
+              class="cupcake"
+              src="./照片/食物/deva-williamson-S2jw81lfrG0-unsplash.jpg"
+              alt=""
+            />
+            <h3>杯子蛋糕</h3>
+            <h3 class="price">
+              <button class="add">+</button>70 <button class="mi">-</button>
+            </h3>
+          </div>
+          <div>
+            <img src="./照片/瑞士捲.jpg" alt="" />
+            <h3>小山園抹茶捲-切片</h3>
+            <h3 class="price">
+              <button class="add">+</button>120 <button class="mi">-</button>
+            </h3>
+          </div>
+          <div>
+            <img
+              class="cha"
+              src="./照片/食物/anthony-espinosa-6iqpLKqeaE0-unsplash.jpg"
+              alt=""
+            />
+            <h3>夏慕尼蛋糕</h3>
+            <h3 class="price">
+              <button class="add">+</button>180 <button class="mi">-</button>
+            </h3>
+          </div>
+          <div>
+            <img
+              class="cha"
+              src="./照片/食物/anthony-espinosa-6iqpLKqeaE0-unsplash.jpg"
+              alt=""
+            />
+            <h3>夏慕尼蛋糕</h3>
+            <h3 class="price">
+              <button class="add">+</button>180 <button class="mi">-</button>
+            </h3>
+          </div>
+          <div>
+            <img
+              class="cha"
+              src="./照片/食物/anthony-espinosa-6iqpLKqeaE0-unsplash.jpg"
+              alt=""
+            />
+            <h3>夏慕尼蛋糕</h3>
+            <h3 class="price">
+              <button class="add">+</button>180 <button class="mi">-</button>
+            </h3>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

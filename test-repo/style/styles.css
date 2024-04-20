@@ -1,0 +1,356 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: white;
+}
+
+header {
+  margin: 1rem;
+}
+header div {
+  margin: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header div h1 {
+  font-size: 1.8rem;
+}
+header div img {
+  height: 2.5rem;
+  margin-right: 10px;
+}
+header button.toggle-btn {
+  display: none; /* 在小屏幕下显示切换按钮 */
+}
+header nav {
+  width: 90%;
+  overflow: hidden;
+  background-color: white;
+  border-top: 1.2px solid gray;
+  border-bottom: 1.2px solid gray;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header nav a {
+  float: left;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+header nav div.dropdown button.dropbtn {
+  float: left;
+  overflow: hidden;
+}
+header nav div.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+header nav div.dropdown .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+header nav div.dropdown .dropdown-content a:hover {
+  background-color: #ddd;
+}
+header nav div.dropdown .dropdown-content form.header-search div {
+  display: flex;
+}
+header nav div.dropdown .dropdown-content form.header-search div input {
+  margin-left: 0;
+  width: 7rem;
+  height: 2rem;
+  background-color: #dcdcdc;
+  border: none;
+}
+header nav div.dropdown .dropdown-content form.header-search div button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 255, 0);
+}
+header nav div.dropdown .dropdown-content form.header-search div button img {
+  width: 2rem;
+}
+header nav div.dropdown .dropdown-content form.header-search div a:hover {
+  cursor: pointer;
+}
+header nav div.dropdown .dropdown-content form.header-search div a img {
+  margin-left: 0.5rem;
+  width: 2rem;
+}
+header nav .dropdown .dropbtn {
+  margin-left: 0;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background-color: inherit;
+  font-family: inherit;
+}
+
+nav a:hover,
+.dropdown:hover .dropbtn {
+  color: #1573e1;
+  font-weight: bold;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+form.header-search div {
+  display: flex;
+}
+form.header-search div input {
+  margin: 0.2rem;
+  margin-right: 0.8rem;
+  width: 7rem;
+  height: 2rem;
+  background-color: #dcdcdc;
+  border: none;
+}
+form.header-search div button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 255, 0);
+}
+form.header-search div button img {
+  height: 2rem;
+}
+form.header-search div a:hover {
+  cursor: pointer;
+}
+form.header-search div a img {
+  margin-left: 2rem;
+  height: 2rem;
+}
+
+main {
+  margin: 0.75rem;
+  display: flex;
+  justify-content: center;
+}
+main section.pictures {
+  width: 90%;
+  margin-top: 0.5rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  background-image: url(../照片/背景照.jpg);
+  background-size: cover;
+  background-position: center bottom -140px;
+  justify-content: center;
+  align-items: center;
+}
+main section.pictures div {
+  display: flex;
+}
+main section.pictures div div {
+  display: inline-block;
+}
+main section.pictures div div img {
+  width: 18rem;
+  height: 13rem;
+  padding: 1.2rem 1rem;
+  border-radius: 30px;
+  opacity: 0.9;
+}
+main section.pictures div div h2 {
+  margin-top: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+main section.pictures div div h2 a {
+  color: #c5062c;
+  text-decoration: none;
+}
+main section.pictures div div p {
+  background-color: rgba(255, 255, 255, 0.65);
+  color: rgb(67, 65, 65);
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+main section.pictures div div img.act1 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center middle;
+     object-position: center middle;
+}
+main section.pictures div div img.act2 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center middle;
+     object-position: center middle;
+}
+main section.pictures div div img.act3 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+main section.product {
+  width: 90%;
+  margin-top: 0.5rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  background-color: rgb(242, 242, 242);
+  background-size: cover;
+  background-position: center bottom -140px;
+  justify-content: center;
+}
+main section.product div div {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 200px;
+}
+main section.product div div img {
+  width: 18rem;
+  height: 13rem;
+  padding: 1.2rem 1rem;
+  border-radius: 30px;
+  opacity: 0.9;
+}
+main section.product div div h3 {
+  background-color: rgba(242, 242, 242, 0.466);
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+main section.product div div h3 button.add {
+  height: 2.5vw;
+  width: 2.5vw;
+  margin-right: 0.2rem;
+  background-color: rgb(195, 240, 225);
+  border-radius: 50px;
+}
+main section.product div div h3 button.mi {
+  height: 2.5vw;
+  width: 2.5vw;
+  font-size: 1rem;
+  margin-left: 0.2rem;
+  background-color: rgb(240, 210, 195);
+  border-radius: 50px;
+}
+main section.product div div h3.price {
+  margin: 0rem 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid gray;
+}
+main section.product div div img.cupcake {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 95%;
+     object-position: 50% 95%;
+}
+main section.product div div img.cha {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 70%;
+     object-position: 50% 70%;
+}
+main section.about div {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+main section.about div img {
+  width: 24vw;
+  height: 13vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+main section.about div img.wom {
+  -o-object-position: top center;
+     object-position: top center;
+}
+main section.about div p {
+  margin: 1rem;
+  font-size: 1rem;
+}
+main section.contact {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+main section.contact div.left {
+  margin: 1rem 3rem;
+  flex: 1 1 200px;
+}
+main section.contact div.left img {
+  width: 40vw;
+}
+main section.contact div.right {
+  flex: 1 1 200px;
+  flex-direction: column;
+}
+main section.contact div.right img {
+  width: 22vw;
+}
+main section.contact div.right p {
+  margin-left: 1.5rem;
+}
+
+.active {
+  color: #4763c9;
+}
+
+@media screen and (max-width: 1200px) {
+  main section div div {
+    max-width: none;
+  }
+  main section div div img {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header nav {
+    flex-direction: column;
+  }
+  main section.pictures div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  main section.pictures div div {
+    max-width: none;
+  }
+  main section.pictures div div img {
+    justify-content: center;
+  }
+  main section.contact div.right,
+  main section.contact div.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=styles.css.map */

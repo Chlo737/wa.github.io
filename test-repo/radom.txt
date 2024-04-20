@@ -1,0 +1,9 @@
+function convertor(param1, param2) {
+  return param1 / param2;
+}
+
+let param1 = Number(prompt("請輸入股價："));
+let param2 = Number(prompt("請輸入本益比："));
+
+let result = convertor(param1, param2);
+alert("每股預估盈餘：" + result);
