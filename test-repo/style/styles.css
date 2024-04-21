@@ -34,13 +34,13 @@ header button.toggle-btn {
 }
 header nav {
   width: 90%;
-  overflow: hidden;
   background-color: white;
   border-top: 1.2px solid gray;
   border-bottom: 1.2px solid gray;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
 }
 header nav a {
   float: left;
@@ -48,9 +48,9 @@ header nav a {
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
-header nav div.dropdown button.dropbtn {
-  float: left;
-  overflow: hidden;
+header nav div.dropdown {
+  padding: 0.4rem;
+  margin: 0;
 }
 header nav div.dropdown .dropdown-content {
   display: none;
@@ -59,6 +59,7 @@ header nav div.dropdown .dropdown-content {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  top: 50px;
 }
 header nav div.dropdown .dropdown-content a {
   float: none;
