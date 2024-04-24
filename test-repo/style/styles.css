@@ -240,21 +240,6 @@ main section.product div div h3 {
   justify-content: center;
   font-size: 1.1rem;
 }
-main section.product div div h3 button.add {
-  height: 2.5vw;
-  width: 2.5vw;
-  margin-right: 0.2rem;
-  background-color: rgb(195, 240, 225);
-  border-radius: 50px;
-}
-main section.product div div h3 button.mi {
-  height: 2.5vw;
-  width: 2.5vw;
-  font-size: 1rem;
-  margin-left: 0.2rem;
-  background-color: rgb(240, 210, 195);
-  border-radius: 50px;
-}
 main section.product div div h3.price {
   margin: 0rem 1rem;
   padding-top: 0.5rem;
@@ -318,6 +303,37 @@ main section.contact div.right img {
 }
 main section.contact div.right p {
   margin-left: 1.5rem;
+}
+
+button.add,
+button.mi {
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.1em 0.6em;
+  font-weight: bold;
+  border: none;
+  border-radius: 450%;
+  --c: #229091; /* the color*/
+  box-shadow: 0 0 0 0.1em inset var(--c);
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: var(--_g) calc(var(--_p, 0%) - 100%) 0%, var(--_g) calc(200% - var(--_p, 0%)) 0%, var(--_g) calc(var(--_p, 0%) - 100%) 100%, var(--_g) calc(200% - var(--_p, 0%)) 100%;
+  background-size: 50.5% calc(var(--_p, 0%) / 2 + 0.5%);
+  outline-offset: 0.1em;
+  transition: background-size 0.4s, background-position 0s 0.4s;
+}
+
+button.add:hover,
+button.mi:hover {
+  --_p: 100%;
+  transition: background-position 0.4s, background-size 0s;
+}
+
+button.add:active,
+button.mi:active {
+  box-shadow: 0 0 9000000000Q inset rgba(0, 0, 0, 0.6);
+  background-color: var(--c);
+  color: #fff;
 }
 
 .active {
